@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+	   <form-bean name="helloWorldForm"  
+		type="com.mkyong.common.form.HelloWorldForm"/>
+		<!-- Tao 1 form-bean co ten tuy y  -->
+		<!-- cai ten nay se goi vao form(HelloWorldForm trong packgage -->
+	</form-beans>
+
+
+	<action-mappings>
+	   <action path="/helloWorld"
+		type="com.mkyong.common.action.HelloWorldAction"
+		name="helloWorldForm">
+		<forward name="success" path="/viewjsp.jsp"/>
+		<!-- action path="/helloWord" kho gap duong dan nay se doc form(HelloWorldAction)trong pakage com.mkyong.common.action  -->
+		<!-- name trung voi ten cua form-bean(helloWorldForm) -->
+		<!-- kho gap ten la seccess se doc den fie viewjsp.jsp-->
+		<!-- success nam trong file HelloWorldForm -->
+	   </action>
+	</action-mappings>
+
+</struts-config>

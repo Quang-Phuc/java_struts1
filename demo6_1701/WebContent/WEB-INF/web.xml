@@ -1,0 +1,31 @@
+<web-app>
+  <display-name>Maven Struts Examples</display-name>
+
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>
+        org.apache.struts.action.ActionServlet
+    </servlet-class>
+    <init-param>
+        <param-name>config</param-name>
+        <param-value>
+         /WEB-INF/struts-config.xml <!-- thu tu chay file chay tu tren xuong gap day se vao doc file struts-config.xml -->							
+        </param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+       <servlet-name>action</servlet-name>
+       <url-pattern>*.doo</url-pattern><!-- Doc file .doo -->
+  </servlet-mapping>
+ <!-- <welcome-file-list>
+        <welcome-file></welcome-file>
+    </welcome-file-list> trong viet de no chay den trang nay dau tien-->
+</web-app>
+<!-- thu tu thuc hien code 
+	1.tao HelloWorldForm.java trong pakage tren 
+	2.tao file HelloWoldAction  
+	3.tao trang view.jsp can khai bao <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+	4.Dieu huong cho trang bang xay dung file struts-config.xml
+	5.Tao file web.xml
+len tren dau -->
